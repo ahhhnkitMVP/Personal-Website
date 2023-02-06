@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding:0;
+  font-family: sans-serif;
+}
+
+.hero{
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background: rgb(6 5 5);
+   }
+
+nav{
+  display:flex;
+  width:90%;
+  margin: auto;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  background-color: crimson;
+ }
+
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: red;
+}
+nav ul li{
+  display:inline-block;
+  list-style: none;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+nav ul li{
+  text-decoration: none;
+  color: rgb(31, 95, 39);
+  font-weight: bold;
+}
+
+nav ul li a:hover{
+color:rgb(76, 102, 156);
+}
+ 
+
+#heading{
+ color:rgb(0, 0, 0);
+ font-size: 40px;
+ text-align: center;
+ font-weight: bolder;
+ margin-top: 100px;
+ border-radius: 20px;
+}
+
+#heading:hover{
+  background-color: rgb(255, 255, 255);
+}
+
+#one{
+  font-size: 20px;
+  color: rgb(50, 113, 127);
+  font-weight: bold;
+  flex: 1;
+  
+  text-align: center;
+}
+
+#two{
+  font-size: 20px;
+  color: rgb(2, 2, 2);
+  font-weight: bold;
+  flex: 1;
+  
+  text-align:center;
+}
+#three{
+  font-size: 20px;
+  color: rgb(20, 117, 75);
+  font-weight: bold;
+  flex: 1;
+  
+  text-align: center;
+}
+.Ankit{
+  height: 550px;
+  width: 400px;
+  margin-top: 50px;
+
+}
+
+
+section{
+  display: flex;
+} 
+
+
+@media only screen and (max-width: 768px) {
+    
+  nav {
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(22, 127, 156);
+    }
+  
+     nav img.logo {
+      margin-bottom: 20px;
+    } 
+    .Ankit img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #three img{
+      display: none;
+    }
+    .th p{
+      display: none;
+    }
+    
+  }

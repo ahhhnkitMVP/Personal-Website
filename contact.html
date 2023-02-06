@@ -1,24 +1,74 @@
 <html lang="en">
 <head>
+   	<script>
+		function validateform(){
+			userid=document.myform.userid.value;
+			var name=document.myform.name.value;
+			var password=document.myform.password.value;
+			var address=document.myform.address.value;
+			var zipcode=document.myform.zipcode.value;
+
+			if (name==null || name==""){
+				alert("Name can't be blank");
+				return false;
+			}
+			else if(password.length<6){
+				alert("password must be at least 6 character long.");
+				return false;
+			}
+			else if(address==""){
+				alert("address cannot be blank");
+				return false;
+			}
+			else if(userid<5){
+				alert("userid must be at least 3 character long");
+				return false;
+			}
+			else if(zipcode==""){
+				alert("you must enter zipcode");
+				return false;
+			}
+			else if(country==null){
+				alert("country cant be blank");
+				return false;
+			}
+    }
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <div class="hero">
         <nav>
             <img src="onlinelogomaker-012423-2200-2902-2000-transparent.png" class="logo">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="interest.html">INTEREST</a></li>
+                <li><a href="ankitbogatiResume.png">RESUME</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="reference.html">REFERENCE</a></li>
             </ul>
         </nav>
 </head>
 <body>
-
-</body>
-  
+    <div class="contactform">
+        <h1>Contact me for inquiry.</h1>
+        <form name="myform" method="post" action="index.html" onsubmit="return validateform()">
+			Userid: <input type="id" name="userid"><br/> 
+			Name: <input type="text" name="name"><br/>
+			Password: <input type="password" name="password"><br/>
+			Address: <input type="text" name="address"><br/>
+			Country: <input type="text" name="country"><br/>
+			Zip code: <input type="number" name="zipcode"><br/>
+			Email: <input type="text" name="email"><br/>
+			Gender: <input type="radio" name="gender" value="male" >male <input type="radio" name="gender" value="female" >female<br/>
+			Language: <input type="checkbox" name="language" value="english">English <input type="checkbox" name="language" value="Nepali">Nepali<br>
+				About: <input type="text" name="about"><br> 
+				<input type="submit" class="click" value="register">
+			</form>
+    </div>
+    </body>
+	</html>
+    
